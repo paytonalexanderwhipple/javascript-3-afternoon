@@ -40,6 +40,11 @@
 */
 
 function showValues( obj ) {
+  let str = "";
+  for (let key in obj) {
+    str += obj[key]
+  }
+  return str
   //Code Here
 }
 
@@ -53,7 +58,14 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+function greaterThan10(obj) {
+  for (let key in obj) {
+    if (obj[key] > 10) {
+      obj[key] = 0;
+    }
+  }
+  return obj
+}//Code Here
 
 
 
@@ -65,7 +77,12 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+function double(obj) {
+  for (let key in obj) {
+    obj[key] *= 2
+  }
+  return obj
+}//Code Here
 
 
 
@@ -79,7 +96,16 @@ function showValues( obj ) {
   By the end of the for in loop, you should have a sentence, return that sentence.
 */
 
-//Code Here
+function secrets(obj) {
+  let str = "";
+  for (let key in obj) {
+    let keyArr = key.split('')
+    if (keyArr[0] == "s" && keyArr[1] == "h") {
+      str += obj[key]
+    }
+  }
+  return str
+}//Code Here
 
 
 
@@ -110,7 +136,10 @@ function showValues( obj ) {
   Delete the property password and return the object.
 */
 
-//Code Here
+function removePassword(obj) {
+  delete obj.password
+  return obj
+}//Code Here
 
 
 
@@ -129,7 +158,11 @@ var deleteTheBigNumbers = {
   Write a for in loop that deletes every property from the object deleteTheBigNumbers whose value is greater than 100.
 */
 
-//Code Here
+for (let key in deleteTheBigNumbers) {
+  if (deleteTheBigNumbers[key] > 100) {
+    delete deleteTheBigNumbers[key]
+  }
+} //Code Here
 
 
 
@@ -142,7 +175,14 @@ var deleteTheBigNumbers = {
   Return the updated object.
 */
 
-//Code Here
+function startsWithK(obj) {
+  for (let key in obj) {
+    if (key.split("")[0] == "k"){
+      delete obj[key]
+    }
+  }
+  return obj
+}//Code Here
 
 
 
@@ -157,6 +197,13 @@ var deleteTheBigNumbers = {
   (hint: the method includes() may be of use...)
 */
 
-//Code Here
+function hiddenTreasure(obj) {
+  for (let key in obj) {
+    if (obj[key].indexOf("treasure") === -1) {
+      delete obj[key]
+    }
+  }
+  return obj
+}//Code Here
 
 
